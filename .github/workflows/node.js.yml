@@ -22,7 +22,7 @@ jobs:
         run: yarn build && touch ./out/.nojekyll
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4.7.1
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           GITHUB_TOKEN: ${{ secrets.PORTFOLIO_TOKEN }}
           BRANCH: gh-pages # Change if you prefer a different branch for deployment
