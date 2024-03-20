@@ -108,10 +108,10 @@ function ShadowSkill({ data }: { data: PersonalData['skills'] }) {
                 gap={'1rem'}
                 m={'1rem'}>
                 <Image
-                  src={`/assets/${skill.icon}.png`}
+                  src={`assets/${skill.icon}.png`}
                   alt={skill.name}
-                  width={70}
-                  height={70}
+                  w={70}
+                  h={70}
                 />
                 <Text fontSize='2xl' fontWeight='bold' textAlign={'center'}>
                   {skill.name}
