@@ -1,0 +1,181 @@
+{
+  "name": "Ahmed Soran Majid",
+  "brd": "19/12/1998",
+  "phone_number": "+9647705480188",
+  "email": "ahmadsorann1@gmail.com",
+  "location": "Sulaymaniyah, Iraq",
+  "github": "https://github.com/ahmadsoran",
+  "linkedin": "https://www.linkedin.com/in/ahmedsoran",
+  "twitter": "https://twitter.com/ahmadsorannn",
+  "job_title": "Full Stack Developer",
+  "skills": [
+    {
+      "name": "Html",
+      "icon": "html",
+      "description": "HTML is the standard markup language for documents designed to be displayed in a web browser. not considered a programming language :v"
+    },
+    {
+      "name": "Css (Sass)",
+      "icon": "sass",
+      "description": "CSS is a style sheet language used to style the visual presentation of a document written in HTML."
+    },
+    {
+      "name": "JavaScript (TypeScript)",
+      "icon": "typescript",
+      "description": "JavaScript is a high-level, interpreted programming language that conforms to the ECMAScript specification. TypeScript is a strict syntactical superset of JavaScript and adds optional static typing to the language."
+    },
+    {
+      "name": "React (Next.js)",
+      "icon": "nextjs",
+      "description": "React is an open-source, front end, JavaScript library for building user interfaces or UI components. Next.js is a React framework that enables functionality such as server-side rendering and generating static websites for React based web applications."
+    },
+    {
+      "name": "React Native",
+      "icon": "react",
+      "description": "React Native is an open-source mobile application framework created by Facebook (meta). It is used to develop applications for Android, iOS, Web and UWP by enabling developers to use React along with native platform capabilities."
+    },
+    {
+      "name": "Electron",
+      "icon": "react",
+      "description": "Electron is an open-source software framework developed and maintained by GitHub. It allows for the development of desktop GUI applications using web technologies: it combines the Chromium rendering engine and the Node.js runtime."
+    },
+    {
+      "name": "Node.js (Express)",
+      "icon": "node-js",
+      "description": "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser. Express.js, or simply Express, is a back end web application framework for Node.js."
+    },
+    {
+      "name": "Go Lang (Gin)",
+      "icon": "golang",
+      "description": "Go is a statically typed, compiled programming language designed at Google. Gin is a web framework written in Go (Golang). It features a Martini-like API with much better performance, up to 40 times faster."
+    },
+    {
+      "name": "MongoDB",
+      "icon": "mongodb",
+      "description": "MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas."
+    },
+    {
+      "name": "MySQL",
+      "icon": "mysql",
+      "description": "MySQL is an open-source relational database management system. Its name is a combination of 'My', the name of co-founder Michael Widenius's daughter, and 'SQL', the abbreviation for Structured Query Language."
+    }
+  ],
+  "experience": [
+    {
+      "title": "Full Stack Developer",
+      "company": "Netspot Solutions",
+      "location": "Sulaymaniyah, Iraq",
+      "from": "March 2023",
+      "to": "Present",
+      "description": "Developing web and mobile applications using React, React Native, and Node.js."
+    },
+    {
+      "title": "Full Stack Developer",
+      "company": "Mode Group",
+      "location": "Sulaymaniyah, Iraq",
+      "from": "Aug 2022",
+      "to": "Nov 2022",
+      "description": "Developing full stack web applications using React, Node.js, and MongoDB."
+    }
+  ],
+  "education": "No formal education, self-taught developer.",
+  "languages": [
+    {
+      "language": "Kurdish",
+      "level": "Native"
+    },
+    {
+      "language": "English",
+      "level": "Intermediate"
+    },
+    {
+      "language": "Arabic",
+      "level": "Proficient"
+    }
+  ],
+  "interests": [
+    "Open Source",
+    "Web Development",
+    "Mobile Development",
+    "Api Development",
+    "PC Applications Development",
+    "Gaming"
+  ],
+  "projects": [
+    {
+      "name": "Food Dilivery App",
+      "description": "A food dilivery app built using React Native.",
+      "images": [
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1658683973/portfolio/E49D337E-8016-44DC-9E73-A5FD48F2EC31_skf5xq.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1658683973/portfolio/705601E2-BCE4-49AC-BCAF-EE19A82627F1_kywjis.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1658683969/portfolio/FAC13BC3-3E6B-4E79-B2CE-A1D752B8E0AB_gwuaxn.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1658683977/portfolio/CA36A39E-6419-42AA-B340-98AFCC49F1C9_vdxko4.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1659646192/portfolio/178A1FD6-5010-4CC6-8285-4C9DFB5271CD_i3bzsw.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1659646193/portfolio/3571BC1F-D3C9-4CC6-8B0E-2D3740728FB2_sofial.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1659646193/portfolio/D345250D-8E38-436B-84B7-8FC9008C189F_tvmw1i.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1659646194/portfolio/DC5C39BB-9934-44AF-BABA-0043513293F0_eyk3a6.png"
+      ]
+    },
+    {
+      "name": "Admin Panel",
+      "description": "An admin panel for Arkan Fonts website",
+      "images": [
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1657974208/portfolio/Screenshot_from_2022-07-16_15-19-29_vur7az.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1657974208/portfolio/Screenshot_from_2022-07-16_15-20-25_gxz3od.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1657974209/portfolio/Screenshot_from_2022-07-16_15-22-46_ecvdpo.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1657974209/portfolio/Screenshot_from_2022-07-16_15-22-20_hrydm8.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1657974208/portfolio/Screenshot_from_2022-07-16_15-21-42_uz9tie.png"
+      ]
+    },
+    {
+      "name": "Arkan Font Website",
+      "description": "A website for Arkan Fonts where users can download fonts.",
+      "demo": "https://arkanfonts.vercel.app",
+      "images": [
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1657973754/portfolio/Screenshot_from_2022-07-16_15-10-29_kx6svu.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1657973754/portfolio/Screenshot_from_2022-07-16_15-11-35_cjfyw4.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1657973754/portfolio/Screenshot_from_2022-07-16_15-11-58_ne07bs.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1657973754/portfolio/Screenshot_from_2022-07-16_15-10-55_molrbt.png"
+      ]
+    },
+    {
+      "name": "React Native Religious App",
+      "description": "A religious app built using React Native.",
+      "images": [
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1652894320/71FB34D7-38DC-4280-B937-4072DA144674_cgx2pv.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1652894320/5003DFBE-D725-4CED-B939-A23AC05F41A4_itc1ih.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1652894321/BD87A80A-F249-43B0-83DE-9F93A68FD0B5_jdbbij.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1652894321/E9A4AFDB-9C70-4DB1-B1E9-1C9C8AB40A90_zuuu8u.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1652894321/80A2FF71-7D07-44A1-8DA7-D01041E069C8_fpyoqy.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1657972552/E6F7C0CE-054A-49E1-B8B2-75B2616BAFFD_tzzp4k.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1657972553/0C3182C6-E3CD-4834-A303-E52763A3B677_kmz9fu.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1657972553/C4C873A3-9716-4131-B471-21319FE6E086_c9c5pf.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1657972553/DF9F6317-63CE-4A6E-9D8C-5F4DE312EC61_roquwx.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1657972553/13121F01-0525-4F1F-A720-450501224A82_chovtf.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1657972553/6AD19BB5-9246-44FE-8BA5-17899BBD2B65_bu10xd.png"
+      ]
+    },
+    {
+      "name": "Youtube Downloader",
+      "description": "A youtube downloader app ",
+      "images": [
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1657921591/portfolio/Screenshot_from_2022-07-16_00-44-16_ktvs3k.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1657921591/portfolio/Screenshot_from_2022-07-16_00-44-40_coq7t9.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1657921591/portfolio/Screenshot_from_2022-07-16_00-45-33_zijod1.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1657921591/portfolio/Screenshot_from_2022-07-16_00-45-05_qio0od.png"
+      ]
+    },
+    {
+      "name": "Landing Page",
+      "description": "A landing page for a veterinary clinic",
+      "images": [
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1657913208/portfolio/Screenshot_from_2022-07-15_22-21-54_vfamth.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1657913209/portfolio/Screenshot_from_2022-07-15_22-22-59_jpuut2.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1657913210/portfolio/Screenshot_from_2022-07-15_22-23-34_bhlknf.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1657913211/portfolio/Screenshot_from_2022-07-15_22-24-22_avn7w4.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1657913211/portfolio/Screenshot_from_2022-07-15_22-25-06_ctfzid.png",
+        "https://res.cloudinary.com/ahmacloud/image/upload/v1657913211/portfolio/Screenshot_from_2022-07-15_22-25-39_nmygjv.png"
+      ]
+    }
+  ]
+}
