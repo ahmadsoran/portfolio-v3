@@ -1,14 +1,12 @@
 'use client';
 
 import { PersonalData } from '@/@types';
-import { Box, Center, Flex, Text } from '@chakra-ui/react';
+import { Box, Center, Flex, Image, Text } from '@chakra-ui/react';
 import { useMediaQuery, useMouse } from '@mantine/hooks';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import { useState } from 'react';
 export default function Skills({ data }: { data: PersonalData['skills'] }) {
   const isDesktop = useMediaQuery('(min-width: 800px)');
-  console.log(isDesktop);
   return (
     <Box
       id='#skills-section'
@@ -47,10 +45,10 @@ export default function Skills({ data }: { data: PersonalData['skills'] }) {
               gap={'1rem'}
               m={'1rem'}>
               <Image
-                src={`/assets/${skill.icon}.png`}
+                src={`assets/${skill.icon}.png`}
                 alt={skill.name}
-                width={70}
-                height={70}
+                w={70}
+                h={70}
               />
               <Text fontSize='2xl' fontWeight='bold' textAlign={'center'}>
                 {skill.name}
