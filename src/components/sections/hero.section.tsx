@@ -16,7 +16,7 @@ export default function HeroSection() {
           opacity={0.7}
         />
         <Heading as={'h2'} size={'md'} opacity={0.7}>
-          Hey, I'm Ahmed Soran 👋
+          Hey, I&apos;m Ahmed Soran 👋
         </Heading>
         <Heading
           as={'h1'}
@@ -51,9 +51,9 @@ export default function HeroSection() {
           </Text>
         </Heading>
         <Text opacity={0.5} align={'center'} maxW={'md'}>
-          i'm Full-stack developer passionate about crafting user-friendly apps
-          across web, mobile, desktop & building scalable APIs that power the
-          platform.
+          i&apos;m Full-stack developer passionate about crafting user-friendly
+          apps across web, mobile, desktop & building scalable APIs that power
+          the platform.
         </Text>
         <Button
           // colorScheme={'gray'}
