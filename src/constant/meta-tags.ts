@@ -10,7 +10,7 @@ export const StaticMetaTags: Metadata = {
   authors: [
     {
       name: 'Ahmed Soran',
-      url: 'https://www.ahmedsoran.dev',
+      url: 'https://ahmadsoran.github.io/portfolio-v3',
     },
   ],
   openGraph: {
@@ -21,26 +21,29 @@ export const StaticMetaTags: Metadata = {
     description:
       'Ahmed Soran, a Full-Stack Developer from Kurdistan, specializing in software development with expertise in React, React Native, Next.js, Node.js, Electron.js, GoLang, MongoDB, and MySQL.',
     emails: ['ahmadsorann1@gmail.com'],
-    images: ['https://www.ahmedsoran.dev/assets/images/a-logo.png'],
+    images: [
+      'https://ahmadsoran.github.io/portfolio-v3/assets/images/a-logo.png',
+    ],
     title: 'Ahmed Soran Portfolio',
     phoneNumbers: ['+964 7705480188'],
-    url: 'https://www.ahmedsoran.dev',
+    url: 'https://ahmadsoran.github.io/portfolio-v3',
     determiner: 'auto',
   },
   twitter: {
     card: 'summary_large_image',
     site: '@ahmedsoran.dev',
     creator: '@ahmedsorannn',
-    images: 'https://www.ahmedsoran.dev/assets/images/a-logo.png',
+    images:
+      'https://ahmadsoran.github.io/portfolio-v3/assets/images/a-logo.png',
   },
   abstract:
     'Ahmed Soran, a Full-Stack Developer from Kurdistan, specializing in software development with expertise in React, React Native, Next.js, Node.js, Electron.js, GoLang, MongoDB, and MySQL.',
   alternates: {
-    canonical: 'https://www.ahmedsoran.dev',
+    canonical: 'https://ahmadsoran.github.io/portfolio-v3',
     languages: {
-      en: 'https://www.ahmedsoran.dev',
-      ar: 'https://www.ahmedsoran.dev/ar',
-      ku: 'https://www.ahmedsoran.dev/ku',
+      en: 'https://ahmadsoran.github.io/portfolio-v3',
+      ar: 'https://ahmadsoran.github.io/portfolio-v3/ar',
+      ku: 'https://ahmadsoran.github.io/portfolio-v3/ku',
     },
   },
   applicationName: 'Ahmed Soran Portfolio',
@@ -54,42 +57,42 @@ export const StaticMetaTags: Metadata = {
       rel: 'icon',
       // favicon
       type: 'image/x-icon',
-      url: 'https://www.ahmedsoran.dev/favicon.ico',
+      url: 'https://ahmadsoran.github.io/portfolio-v3/favicon.ico',
       sizes: '16x16',
     },
     {
       rel: 'icon',
       // favicon
       type: 'image/png',
-      url: 'https://www.ahmedsoran.dev/favicon-32x32.png',
+      url: 'https://ahmadsoran.github.io/portfolio-v3/favicon-32x32.png',
       sizes: '32x32',
     },
     {
       rel: 'icon',
       // favicon
       type: 'image/png',
-      url: 'https://www.ahmedsoran.dev/favicon-16x16.png',
+      url: 'https://ahmadsoran.github.io/portfolio-v3/favicon-16x16.png',
       sizes: '16x16',
     },
     {
       // apple touch icon
       rel: 'apple-touch-icon',
       type: 'image/png',
-      url: 'https://www.ahmedsoran.dev/apple-touch-icon.png',
+      url: 'https://ahmadsoran.github.io/portfolio-v3/apple-touch-icon.png',
       sizes: '180x180',
     },
     {
       // android chrome icon
       rel: 'manifest',
       type: 'image/png',
-      url: 'https://www.ahmedsoran.dev/android-chrome-192x192.png',
+      url: 'https://ahmadsoran.github.io/portfolio-v3/android-chrome-192x192.png',
       sizes: '192x192',
     },
     {
       // android chrome icon
       rel: 'manifest',
       type: 'image/png',
-      url: 'https://www.ahmedsoran.dev/android-chrome-512x512.png',
+      url: 'https://ahmadsoran.github.io/portfolio-v3/android-chrome-512x512.png',
       sizes: '512x512',
     },
   ],
