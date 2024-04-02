@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { poppinsFont } from '../constant/const';
 import { ColorModeScript } from '@chakra-ui/react';
-import theme from '@/components/common/styles/theme';
+import theme from '@/styles/theme';
 import Providers from '@/components/common/provider';
 import Head from 'next/head';
 import { StaticMetaTags } from '@/constant/meta-tags';

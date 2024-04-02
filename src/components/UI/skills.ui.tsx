@@ -1,7 +1,7 @@
 'use client';
 
 import { PersonalData } from '@/@types';
-import { Box, Center, Flex, Image, Text } from '@chakra-ui/react';
+import { Box, Center, Grid, GridItem, Image, Text } from '@chakra-ui/react';
 import { useMediaQuery, useMouse } from '@mantine/hooks';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
@@ -12,6 +12,7 @@ export default function Skills({ data }: { data: PersonalData['skills'] }) {
       id='#skills-section'
       as='section'
       my={'2rem'}
+      // px={'1rem'}
       // py={'1rem'}
       bg={'gray.900'}
       overflow={'hidden'}
@@ -30,33 +31,42 @@ export default function Skills({ data }: { data: PersonalData['skills'] }) {
           SKILLS
         </Text>
       </Center>
-      <Flex
-        wrap={'wrap'}
-        justify={'center'}
+      <Grid
+        templateColumns={[
+          'repeat(2, 1fr)',
+          'repeat(2, 1fr)',
+          'repeat(3, 1fr)',
+          'repeat(4, 1fr)',
+        ]}
+        placeItems={'center'}
+        gap={'3rem'}
+        my={'3rem'}
         filter={isDesktop ? 'grayscale(1)' : 'none'}>
         {data.map((skill, index) => {
           return (
-            <Flex
+            <GridItem
               key={index}
-              direction={'column'}
-              w={300}
-              align={'center'}
-              justify={'center'}
-              gap={'1rem'}
-              m={'1rem'}>
+              justifyContent={'center'}
+              alignItems={'center'}
+              display={'flex'}
+              flexDirection={'column'}
+              gap={'1rem'}>
               <Image
                 src={`assets/${skill.icon}.png`}
                 alt={skill.name}
-                w={70}
-                h={70}
+                w={[50, 70]}
+                h={[50, 70]}
               />
-              <Text fontSize='2xl' fontWeight='bold' textAlign={'center'}>
+              <Text
+                fontSize={['small', 'large', 'larger']}
+                fontWeight='bold'
+                textAlign={'center'}>
                 {skill.name}
               </Text>
-            </Flex>
+            </GridItem>
           );
         })}
-      </Flex>
+      </Grid>
     </Box>
   );
 }
@@ -96,30 +106,41 @@ function ShadowSkill({ data }: { data: PersonalData['skills'] }) {
             SKILLS
           </Text>
         </Center>
-        <Flex wrap={'wrap'} justify={'center'} pos={'relative'}>
+        <Grid
+          templateColumns={[
+            'repeat(2, 1fr)',
+            'repeat(2, 1fr)',
+            'repeat(3, 1fr)',
+            'repeat(4, 1fr)',
+          ]}
+          placeItems={'center'}
+          gap={'3rem'}
+          my={'3rem'}>
           {data.map((skill, index) => {
             return (
-              <Flex
+              <GridItem
                 key={index}
-                direction={'column'}
-                w={300}
-                align={'center'}
-                justify={'center'}
-                gap={'1rem'}
-                m={'1rem'}>
+                justifyContent={'center'}
+                alignItems={'center'}
+                display={'flex'}
+                flexDirection={'column'}
+                gap={'1rem'}>
                 <Image
                   src={`assets/${skill.icon}.png`}
                   alt={skill.name}
-                  w={70}
-                  h={70}
+                  w={[50, 70]}
+                  h={[50, 70]}
                 />
-                <Text fontSize='2xl' fontWeight='bold' textAlign={'center'}>
+                <Text
+                  fontSize={['small', 'large', 'larger']}
+                  fontWeight='bold'
+                  textAlign={'center'}>
                   {skill.name}
                 </Text>
-              </Flex>
+              </GridItem>
             );
           })}
-        </Flex>
+        </Grid>
       </Box>
     </motion.div>
   );

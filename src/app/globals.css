@@ -52,4 +52,28 @@ body {
 .shapeOutside {
   border-radius: 50%;
   shape-outside: circle(50% at 50% 50%);
+}
+
+.parallax {
+  overflow: hidden;
+  letter-spacing: -2px;
+  line-height: 0.8;
+  margin: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.parallax .scroller {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 64px;
+  display: flex;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  height: 60px;
+}
+.parallax .scroller span {
+  margin-inline: 0.5rem;
+  font-family: serif;
 }/*# sourceMappingURL=globals.css.map */

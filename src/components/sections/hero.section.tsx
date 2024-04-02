@@ -18,11 +18,7 @@ export default function HeroSection() {
         <Heading as={'h2'} size={'md'} opacity={0.7}>
           Hey, I&apos;m Ahmed Soran 👋
         </Heading>
-        <Heading
-          as={'h1'}
-          size={'2xl'}
-          textAlign={'center'}
-          lineHeight='inherit'>
+        <Heading as={'h1'} textAlign={'center'} lineHeight='inherit'>
           <Text
             // as={'span'}
             pos={'relative'}
@@ -45,7 +41,7 @@ export default function HeroSection() {
           <Text
             bgGradient='linear(to-r, var(--chakra-colors-gray-100), var(--chakra-colors-gray-600))'
             bgClip='text'
-            fontSize='6xl'
+            fontSize={['5xl', '6xl']}
             fontWeight='extrabold'>
             Full-Stack Applications
           </Text>
