@@ -1,11 +1,11 @@
 'use client';
 
-import { PersonalData } from '@/@types';
+import { SkillData } from '@/@types';
 import { Box, Center, Grid, GridItem, Image, Text } from '@chakra-ui/react';
 import { useMediaQuery, useMouse } from '@mantine/hooks';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-export default function Skills({ data }: { data: PersonalData['skills'] }) {
+export default function Skills({ data }: { data: SkillData[] }) {
   const isDesktop = useMediaQuery('(min-width: 800px)');
   return (
     <Box
@@ -71,7 +71,7 @@ export default function Skills({ data }: { data: PersonalData['skills'] }) {
   );
 }
 
-function ShadowSkill({ data }: { data: PersonalData['skills'] }) {
+function ShadowSkill({ data }: { data: SkillData[] }) {
   const { x, y, ref } = useMouse();
   const size = 250;
   const [mouseIn, setMouseIn] = useState(false);
