@@ -3,7 +3,7 @@
 import { ServicesData } from '@/@types';
 import { Box, Center, Grid, GridItem, Text, VStack } from '@chakra-ui/react';
 import { ParallaxText } from './paralax-text.ui';
-import { Image } from '@chakra-ui/next-js';
+import { Image } from '@chakra-ui/react';
 export default function Services({ data }: { data: ServicesData[] }) {
   return (
     <Box
