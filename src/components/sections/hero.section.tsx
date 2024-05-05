@@ -1,5 +1,6 @@
 'use client';
-import { Avatar, Button, Heading, Text, VStack } from '@chakra-ui/react';
+import { fonts } from '@/constant/const';
+import { Avatar, Button, Text, VStack } from '@chakra-ui/react';
 import { useHover } from '@mantine/hooks';
 import { AnimatePresence, motion } from 'framer-motion';
 import { CgArrowRight } from 'react-icons/cg';
@@ -15,17 +16,24 @@ export default function HeroSection() {
           src={'assets/me.jpeg'}
           opacity={0.7}
         />
-        <Heading as={'h2'} size={'md'} opacity={0.7}>
+        <Text
+          as={'h2'}
+          size={'md'}
+          opacity={0.7}
+          className={fonts.poppinsFont.className}>
           Hey, I&apos;m Ahmed Soran 👋
-        </Heading>
-        <Heading as={'h1'} textAlign={'center'} lineHeight='inherit'>
+        </Text>
+        <Text
+          as={'h1'}
+          textAlign={'center'}
+          lineHeight='inherit'
+          fontSize={['5xl', '6xl']}>
           <Text
-            // as={'span'}
             pos={'relative'}
             _after={{
               content: '""',
               pos: 'absolute',
-              top: '50%',
+              top: '55%',
               left: '25%',
               width: '50%',
               minW: '150px',
@@ -33,19 +41,18 @@ export default function HeroSection() {
               borderBottom: '5px solid var(--chakra-colors-gray-200)',
               borderBottomRadius: '50%',
               zIndex: -1,
-              //   transform: 'rotate(50deg)',
               opacity: 0.2,
-            }}>
+            }}
+            fontWeight={'bold'}>
             Developing
           </Text>
           <Text
             bgGradient='linear(to-r, var(--chakra-colors-gray-100), var(--chakra-colors-gray-600))'
             bgClip='text'
-            fontSize={['5xl', '6xl']}
             fontWeight='extrabold'>
             Full-Stack Applications
           </Text>
-        </Heading>
+        </Text>
         <Text opacity={0.5} align={'center'} maxW={'md'}>
           i&apos;m Full-stack developer passionate about crafting user-friendly
           apps across web, mobile, desktop & building scalable APIs that power

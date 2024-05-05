@@ -78,3 +78,13 @@ body {
     font-family: serif;
   }
 }
+
+.tusker_mid {
+  font-family: 'Tusker Grotesk';
+  src: local('Tusker Grotesk 1500 Medium'), local('Tusker-Grotesk-1500-Medium'),
+    url('TuskerGrotesk-1500Medium.woff2') format('woff2'),
+    url('TuskerGrotesk-1500Medium.woff') format('woff'),
+    url('TuskerGrotesk-1500Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}

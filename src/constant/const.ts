@@ -1,8 +1,9 @@
 import { Poppins } from 'next/font/google';
+import localFont from 'next/font/local';
 
 export const baseUrl = process.env.NEXT_PUBLIC_API_URL;
 
-export const poppinsFont = Poppins({
+const poppinsFont = Poppins({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
   display: 'swap',
   adjustFontFallback: true,
@@ -11,6 +12,18 @@ export const poppinsFont = Poppins({
   fallback: ['-apple-system', 'Segoe UI', 'Roboto', 'Noto Sans', 'sans-serif'],
   subsets: ['latin'],
 });
+
+const tuskerMid = localFont({
+  src: [
+    {
+      path: '../../public/assets/fonts/tg-mid.ttf',
+      weight: '500',
+      style: 'medium',
+    },
+  ],
+});
+
+export const fonts = { poppinsFont, tuskerMid };
 
 export const NavigationLinks = [
   {

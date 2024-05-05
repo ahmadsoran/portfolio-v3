@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { poppinsFont } from '../constant/const';
+import { fonts } from '../constant/const';
 import { ColorModeScript } from '@chakra-ui/react';
 import theme from '@/styles/theme';
 import Providers from '@/components/common/provider';
@@ -19,7 +19,7 @@ export default function RootLayout({
       <Head>
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <body className={poppinsFont.className}>
+      <body className={fonts.poppinsFont.className}>
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />
         <Providers>{children}</Providers>
       </body>
