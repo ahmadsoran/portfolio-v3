@@ -160,6 +160,7 @@ function ShadowSkill({ data }: { data?: SkillData[] }) {
           {data?.map((skill, index) => {
             return (
               <GridItem
+                key={index}
                 justifyContent={'center'}
                 alignItems={'center'}
                 display={'flex'}
