@@ -1,11 +1,11 @@
 'use client';
 
-import { UserData } from '@/src/@types';
+import { UserData } from '@/@types';
 import { Box, Center, Grid, Text } from '@chakra-ui/react';
 export default function Contacts({
   data,
 }: {
-  data: Pick<
+  data?: Pick<
     UserData,
     'github' | 'email' | 'phone_number' | 'linkedin' | 'location'
   >;

@@ -1,19 +1,40 @@
 'use client';
 
-import { SkillData } from '@/src/@types';
+import { SkillData } from '@/@types';
 import { Box, Center, Grid, GridItem, Image, Text } from '@chakra-ui/react';
 import { useMediaQuery, useMouse } from '@mantine/hooks';
-import { motion } from 'framer-motion';
-import { useState } from 'react';
-export default function Skills({ data }: { data: SkillData[] }) {
+import { AnimatePresence, motion, useInView, Variant } from 'framer-motion';
+import { useRef, useState } from 'react';
+const skillAnimationVariants = (arg: {
+  index: number;
+}): {
+  [key: string]: Variant;
+} => ({
+  hidden: {
+    opacity: 0,
+    translateX: arg.index % 2 === 0 ? -100 : 100,
+    filter: 'grayscale(1) blur(10px)',
+  },
+  visible: {
+    opacity: 1,
+    translateX: 0,
+    filter: 'none',
+  },
+});
+export default function Skills({ data }: { data?: SkillData[] }) {
   const isDesktop = useMediaQuery('(min-width: 800px)');
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, {
+    margin: '0px 0px -40% 0px',
+    once: true,
+  });
   return (
     <Box
+      ref={ref}
       id='#skills-section'
       as='section'
       my={'2rem'}
-      // px={'1rem'}
-      // py={'1rem'}
+      minH={!isDesktop ? '30rem' : undefined}
       bg={'gray.900'}
       overflow={'hidden'}
       pos={'relative'}
@@ -42,36 +63,56 @@ export default function Skills({ data }: { data: SkillData[] }) {
         gap={'3rem'}
         my={'3rem'}
         filter={isDesktop ? 'grayscale(1)' : 'none'}>
-        {data.map((skill, index) => {
-          return (
-            <GridItem
-              key={index}
-              justifyContent={'center'}
-              alignItems={'center'}
-              display={'flex'}
-              flexDirection={'column'}
-              gap={'1rem'}>
-              <Image
-                src={`assets/${skill.icon}.png`}
-                alt={skill.name}
-                w={[50, 70]}
-                h={[50, 70]}
-              />
-              <Text
-                fontSize={['small', 'large', 'larger']}
-                fontWeight='bold'
-                textAlign={'center'}>
-                {skill.name}
-              </Text>
-            </GridItem>
-          );
-        })}
+        <AnimatePresence>
+          {inView &&
+            data?.map((skill, index) => {
+              return (
+                <motion.div
+                  key={index}
+                  variants={
+                    !isDesktop ? skillAnimationVariants({ index }) : undefined
+                  }
+                  initial={!isDesktop ? 'hidden' : undefined}
+                  animate={!isDesktop ? 'visible' : undefined}
+                  transition={{
+                    duration: 1.5,
+                    delay: index * 0.1,
+                    type: 'spring',
+                    bounce: 0.45,
+                  }}>
+                  <GridItem
+                    key={index}
+                    justifyContent={'center'}
+                    alignItems={'center'}
+                    display={'flex'}
+                    flexDirection={'column'}
+                    gap={'1rem'}>
+                    <Image
+                      src={`assets/${skill.icon}.png`}
+                      alt={skill.name}
+                      w={[50, 70]}
+                      draggable={false}
+                      userSelect={'none'}
+                      pointerEvents={'none'}
+                      h={[50, 70]}
+                    />
+                    <Text
+                      fontSize={['small', 'large', 'larger']}
+                      fontWeight='bold'
+                      textAlign={'center'}>
+                      {skill.name}
+                    </Text>
+                  </GridItem>
+                </motion.div>
+              );
+            })}
+        </AnimatePresence>
       </Grid>
     </Box>
   );
 }
 
-function ShadowSkill({ data }: { data: SkillData[] }) {
+function ShadowSkill({ data }: { data?: SkillData[] }) {
   const { x, y, ref } = useMouse();
   const size = 250;
   const [mouseIn, setMouseIn] = useState(false);
@@ -116,10 +157,9 @@ function ShadowSkill({ data }: { data: SkillData[] }) {
           placeItems={'center'}
           gap={'3rem'}
           my={'3rem'}>
-          {data.map((skill, index) => {
+          {data?.map((skill, index) => {
             return (
               <GridItem
-                key={index}
                 justifyContent={'center'}
                 alignItems={'center'}
                 display={'flex'}
@@ -130,6 +170,9 @@ function ShadowSkill({ data }: { data: SkillData[] }) {
                   alt={skill.name}
                   w={[50, 70]}
                   h={[50, 70]}
+                  draggable={false}
+                  userSelect={'none'}
+                  pointerEvents={'none'}
                 />
                 <Text
                   fontSize={['small', 'large', 'larger']}

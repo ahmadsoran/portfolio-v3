@@ -12,7 +12,7 @@ export interface UserData {
   job_title: string;
   education: string;
   interests: string[];
-  services: string[];
+  services: ServicesData[];
 }
 
 export interface PersonalData extends UserData {
@@ -54,5 +54,5 @@ export interface SkillData {
 export interface ServicesData {
   title: string;
   description: string;
-  icon: string;
+  img: string;
 }

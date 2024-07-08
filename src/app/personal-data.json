@@ -182,22 +182,22 @@
     {
       "title": "WEB",
       "description": "Developing web applications using modern technologies like React, Next.js",
-      "icon": "assets/web-development.jpeg"
+      "img": "assets/web-development.jpeg"
     },
     {
       "title": "Mobile Apps",
       "description": "Developing mobile applications using React Native (expo)",
-      "icon": "assets/mobile-development.png"
+      "img": "assets/mobile-development.png"
     },
     {
       "title": "API",
       "description": "Developing APIs using Node.js, Express, and Go Lang",
-      "icon": "assets/api-development.png"
+      "img": "assets/api-development.png"
     },
     {
       "title": "PC Apps",
       "description": "Developing PC applications using Electron",
-      "icon": "assets/desktop-development.jpeg"
+      "img": "assets/desktop-development.jpeg"
     }
   ]
 }

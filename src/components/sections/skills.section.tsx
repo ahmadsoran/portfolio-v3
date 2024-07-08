@@ -1,7 +1,6 @@
 import Skills from '../UI/skills.ui';
-import SkillsData from '../../../public/assets/personal-data.json';
+import SkillsData from '@/app/personal-data.json';
 export default async function SkillsSection() {
-  const data = SkillsData;
-  const skills = data.skills;
-  return <Skills data={skills} />;
+  const data = SkillsData.skills;
+  return <Skills data={data} />;
 }

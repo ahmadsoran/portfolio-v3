@@ -1,20 +1,38 @@
 'use client';
 
-import { ServicesData } from '@/src/@types';
-import { Box, Center, Grid, GridItem, Text, VStack } from '@chakra-ui/react';
+import { ServicesData } from '@/@types';
+import { Box, Center, SimpleGrid, Text, VStack } from '@chakra-ui/react';
 import { ParallaxText } from './paralax-text.ui';
 import { Image } from '@chakra-ui/react';
-import { fonts } from '@/src/constant/const';
-export default function Services({ data }: { data: ServicesData[] }) {
+import { fonts } from '@/constant/const';
+import { AnimatePresence } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
+export default function Services({ data }: { data?: ServicesData[] }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(containerRef, {
+    margin: '0px 0px -40% 0px',
+  });
+
   return (
     <Box
+      ref={containerRef}
       id='#service-section'
       as='section'
       my={'2rem'}
       bg={'gray.900'}
       overflow={'hidden'}
+      minH={'90vh'}
       pos={'relative'}
       borderRadius={'md'}>
+      <Box
+        zIndex={-999}
+        top={0}
+        left={0}
+        // bg={'red'}
+        h={'100vh'}
+        w={'100%'}
+        pos={'absolute'}></Box>
       <Center>
         <Text
           bgGradient='linear(to-r, var(--chakra-colors-gray-300), var(--chakra-colors-gray-600))'
@@ -34,28 +52,33 @@ export default function Services({ data }: { data: ServicesData[] }) {
           {' Web, Mobile, Desktop Development, '}
         </ParallaxText>
       </Box>
-      <Grid
-        p={'2rem'}
-        templateColumns={[
-          'repeat(1, 1fr)',
-          'repeat(1, 1fr)',
-          'repeat(2, 1fr)',
-          'repeat(2, 1fr)',
-          'repeat(3, 1fr)',
-        ]}
-        placeItems={'center'}
-        gap={'3rem'}
-        alignItems={'stretch'}>
-        {data.map((project, index) => (
-          <GridItem key={index}>
-            <ServiceCard
-              title={project.title}
-              description={project.description}
-              icon={project.icon}
-            />
-          </GridItem>
-        ))}
-      </Grid>
+      <SimpleGrid p={5} spacing={10} columns={[1, 1, 2]}>
+        <AnimatePresence presenceAffectsLayout>
+          {data?.map(
+            (s, index) =>
+              isInView && (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.9, translateY: 100 }}
+                  animate={{ opacity: 1, scale: 1, translateY: 0 }}
+                  exit={{ opacity: 0, scale: 0.9, translateY: 100 }}
+                  transition={{
+                    duration: 1.3,
+                    delay: index * 0.2,
+                    type: 'spring',
+                    bounce: 0.45,
+                  }}>
+                  <ServiceCard
+                    key={index}
+                    title={s.title}
+                    description={s.description}
+                    img={s.img}
+                  />
+                </motion.div>
+              )
+          )}
+        </AnimatePresence>
+      </SimpleGrid>
     </Box>
   );
 }
@@ -63,11 +86,11 @@ export default function Services({ data }: { data: ServicesData[] }) {
 function ServiceCard({
   title,
   description,
-  icon,
+  img,
 }: {
   title: string;
   description: string;
-  icon: string;
+  img: string;
 }) {
   return (
     <VStack
@@ -75,8 +98,8 @@ function ServiceCard({
       p={'1rem'}
       borderRadius={'md'}
       h={'100%'}
-      maxW={'sm'}
-      minW={'xs'}
+      // maxW={'sm'}
+      minW={'100%'}
       justify={'space-between'}>
       <div>
         <Center>
@@ -96,12 +119,10 @@ function ServiceCard({
 
       <Image
         mt={'1rem'}
-        src={icon}
+        src={img}
         alt={title}
-        width={300}
-        height={300}
         w={'100%'}
-        h={250}
+        h={300}
         borderRadius={4}
         objectFit={'cover'}
         objectPosition='center'
