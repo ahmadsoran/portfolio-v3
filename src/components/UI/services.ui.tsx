@@ -1,9 +1,10 @@
 'use client';
 
-import { ServicesData } from '@/@types';
+import { ServicesData } from '@/src/@types';
 import { Box, Center, Grid, GridItem, Text, VStack } from '@chakra-ui/react';
 import { ParallaxText } from './paralax-text.ui';
 import { Image } from '@chakra-ui/react';
+import { fonts } from '@/src/constant/const';
 export default function Services({ data }: { data: ServicesData[] }) {
   return (
     <Box
@@ -82,8 +83,8 @@ function ServiceCard({
           <Text
             fontSize='2xl'
             w={'fit-content'}
-            fontFamily={'sans-serif'}
-            fontWeight={'bold'}
+            fontWeight={'medium'}
+            className={fonts.tuskerMid.className}
             align={'center'}>
             {title}
           </Text>
@@ -100,10 +101,20 @@ function ServiceCard({
         width={300}
         height={300}
         w={'100%'}
-        h={150}
+        h={250}
         borderRadius={4}
         objectFit={'cover'}
         objectPosition='center'
+        style={{
+          touchAction: 'none',
+          MozWindowDragging: 'no-drag',
+          userSelect: 'none',
+          msUserSelect: 'none',
+          MozUserSelect: 'none',
+          msTouchSelect: 'none',
+          WebkitUserSelect: 'none',
+          pointerEvents: 'none',
+        }}
       />
     </VStack>
   );

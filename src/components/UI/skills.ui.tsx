@@ -1,6 +1,6 @@
 'use client';
 
-import { SkillData } from '@/@types';
+import { SkillData } from '@/src/@types';
 import { Box, Center, Grid, GridItem, Image, Text } from '@chakra-ui/react';
 import { useMediaQuery, useMouse } from '@mantine/hooks';
 import { motion } from 'framer-motion';

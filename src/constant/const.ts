@@ -16,7 +16,7 @@ const poppinsFont = Poppins({
 const tuskerMid = localFont({
   src: [
     {
-      path: '../../public/assets/fonts/tg-mid.ttf',
+      path: '../../public/assets/fonts/tg-mid.woff2',
       weight: '500',
       style: 'medium',
     },
